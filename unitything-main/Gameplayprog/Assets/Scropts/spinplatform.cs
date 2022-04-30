@@ -47,7 +47,7 @@ public class spinplatform : MonoBehaviour
             spinvalue = spinvalue + 1.5f * Time.deltaTime;
             
             t += Time.deltaTime / disappeartime;
-            platformmesh.transform.localScale = Vector3.Lerp(startscale, new Vector3(0,0,0), t);
+            platformmesh.transform.localScale = Vector3.Lerp(startscale, new Vector3(0, 0, 0), t);
         }
         else if (!SPIN)
         {
