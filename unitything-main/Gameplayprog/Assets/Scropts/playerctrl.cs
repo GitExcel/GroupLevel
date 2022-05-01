@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class playerctrl : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class playerctrl : MonoBehaviour
     {
         doublejumpactive = false;
         GetComponent<Animator>();
-        Cursor.lockState = CursorLockMode.Locked; // makes it so the cursor doesn't escape during gameplay
+        Cursor.lockState = CursorLockMode.Locked; // makes it so the cursor doesn't escape during gameplayᗜˬᗜ 
         targetlockcam.enabled = false;
         twodimensionalcam.enabled = false;
         
@@ -27,6 +28,7 @@ public class playerctrl : MonoBehaviour
     public GameObject Cloudparticle;
     public GameObject Powerparticle;
     public GameObject respawnpoint;
+    public Text healthtext;
     
 
     public CinemachineFreeLook normalcam;
@@ -70,6 +72,11 @@ public class playerctrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (healthtext.text != null)
+        {
+            healthtext.text = phealth.ToString();
+        }
+        
         Debug.Log(phealth);
         if (incutscene == false)
         {
