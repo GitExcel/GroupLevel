@@ -2286,7 +2286,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268215982}
-  m_LocalRotation: {x: 0.19611615, y: -2.1447234e-15, z: 5.0727903e-16, w: 0.9805807}
+  m_LocalRotation: {x: 0.19611615, y: -0.000000014611796, z: 0.0000000029223588, w: 0.9805807}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7527,8 +7527,8 @@ MonoBehaviour:
       - {x: 33.635914, y: 1.3130999, z: -0.8017629}
       - {x: 40.69055, y: 0, z: 0.0000038146964}
       - {x: 45.86547, y: -0.96322227, z: 0.58813846}
-      - {x: 45.2569, y: 0.4402331, z: 8.92481}
-      - {x: 46.89591, y: -1.2403257, z: 29.724937}
+      - {x: 45.27521, y: 0.4402331, z: 8.943121}
+      - {x: 46.91422, y: -1.2403257, z: 29.743248}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -8041,6 +8041,7 @@ MonoBehaviour:
   Cloudparticle: {fileID: 519054662}
   Powerparticle: {fileID: 1163705053}
   respawnpoint: {fileID: 922151150}
+  healthtext: {fileID: 1205363887}
   normalcam: {fileID: 1910035296}
   pretendcam: {fileID: 1086290772}
   targetlockcam: {fileID: 941560450}
