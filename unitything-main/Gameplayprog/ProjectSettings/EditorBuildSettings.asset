@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ActualLevel.unity
+    guid: bb0428550e2df2c40ab366e71ff10e33
+  - enabled: 1
+    path: Assets/Scenes/LavaCave.unity
+    guid: 17a4054a32d557443bb5748608a78d29
   m_configObjects: {}

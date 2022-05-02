@@ -6,7 +6,6 @@ public class PortalScript : MonoBehaviour
 {
   public GameObject Player;
   [SerializeField] private PortalScript target;
-
   [SerializeField] private Transform spawnPoint;
   public Transform spawnP{get {return spawnPoint;}}
 
