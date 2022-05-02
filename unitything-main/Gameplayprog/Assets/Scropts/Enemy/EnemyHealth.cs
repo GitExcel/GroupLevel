@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     private GameObject eyes;
     public int damage;
     private Transform target;
+    public rawmovingthing movingblock;
 
     public GameObject newPrefab;
     public GameObject newPrefab2;
@@ -63,11 +64,7 @@ public class EnemyHealth : MonoBehaviour
         //     newPrefab2.transform.localScale = scale3;
         // }
         
-        if (currentHealth <= 0)
-        {
-            IsEnemyDead = true;
-            //Destroy(gameObject);
-        }
+        
     }
 
 
@@ -83,6 +80,14 @@ public class EnemyHealth : MonoBehaviour
         //     Debug.Log("ENEMY DED");
         //    // Destroy(gameObject);
         // }
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("THISWORKS");
+            IsEnemyDead = true;
+            movingblock.directlymove = true;
+            Destroy(gameObject);
+        }
     }
 
     public void AttackPlayer()

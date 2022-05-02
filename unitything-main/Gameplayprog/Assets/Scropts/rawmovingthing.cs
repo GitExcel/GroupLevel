@@ -12,6 +12,7 @@ public class rawmovingthing : MonoBehaviour
     private Vector3 startscale;
     private Vector3 endscale;
     public Basictrigger triggah;
+    public bool directlymove = false;
 
     public float movetime = 0;
     float t;
@@ -43,7 +44,7 @@ public class rawmovingthing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (triggah.activated)
+        if (triggah.activated || directlymove)
         {
             if (returncompleted)
             {
