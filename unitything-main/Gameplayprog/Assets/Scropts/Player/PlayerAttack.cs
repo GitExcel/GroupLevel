@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private GameObject enemy;
-    private int damage;
+    public int damage;
 
 
     private void Start()
