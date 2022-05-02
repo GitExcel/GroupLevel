@@ -26,8 +26,6 @@ public class PatrolAndAttack : MonoBehaviour
     private bool canAttack = true;
     public float enemyCooldown = 1;
 
-    //int count;
-
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -43,7 +41,7 @@ public class PatrolAndAttack : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Enemy spotted the player");
+            //Debug.Log("Enemy spotted the player");
             playerInRange = true;
         }
     }

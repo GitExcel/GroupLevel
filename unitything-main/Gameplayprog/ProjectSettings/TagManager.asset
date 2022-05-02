@@ -15,6 +15,7 @@ TagManager:
   - environment
   - Enemy
   - punchdetection
+  - Eyes
   layers:
   - Default
   - TransparentFX

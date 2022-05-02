@@ -6,14 +6,14 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int currentHealth;
-    public int maxHealth = 100;
+    public int maxHealth = 1000;
     public static bool IsEnemyDead = false;
     
-    private int range = 800;
+    private int range = 50;
     private bool canAttackPlayer = true;
     private GameObject player;
     private GameObject eyes;
-    public int damage = 10;
+    public int damage;
     private Transform target;
 
     public GameObject newPrefab;
@@ -50,13 +50,13 @@ public class EnemyHealth : MonoBehaviour
             IsEnemyDead = true;
         }
         
-        if (currentHealth == 50)
+        if (currentHealth == 500)
         {
             //Destroy(gameObject);
             Instantiate(newPrefab, transform.position, transform.rotation);
             newPrefab.transform.localScale = scale2;
         }
-        else if (currentHealth == 25)
+        else if (currentHealth == 250)
         {
             //Destroy(newPrefab);
             Instantiate(newPrefab2, transform.position, transform.rotation);
@@ -71,10 +71,11 @@ public class EnemyHealth : MonoBehaviour
 
     public void Update()
     {
-        //if (currentHealth > 0 && IsEnemyDead == false) //&& PatrolAndAttack.playerInRange) 
-        //{
-        //    //AttackPlayer();
-        //}
+        Debug.Log(IsEnemyDead);
+        if (currentHealth > 0 && IsEnemyDead == false) //&& PatrolAndAttack.playerInRange) 
+        {
+            AttackPlayer();
+        }
         if (IsEnemyDead)
         {
             Debug.Log("ENEMY DED");
@@ -91,7 +92,6 @@ public class EnemyHealth : MonoBehaviour
         {
             if (hit.collider.CompareTag("Player"))
             {
-                StartCoroutine(Attacking());
                 if (canAttackPlayer)
                 {
                     StartCoroutine(Attacking());
@@ -103,8 +103,8 @@ public class EnemyHealth : MonoBehaviour
     IEnumerator Attacking()
     {
         canAttackPlayer = false;
-        player.GetComponent<PlayerHealth>().PlayerTakeDamage(damage);
-        yield return new WaitForSeconds(1.2f); // how often enemy attacks
+        player.GetComponent<playerctrl>().phealth -= damage;
+        yield return new WaitForSeconds(0.9f); // how often enemy attacks
         canAttackPlayer = true;
     }
 }
