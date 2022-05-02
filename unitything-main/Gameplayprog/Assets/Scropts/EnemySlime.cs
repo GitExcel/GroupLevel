@@ -15,6 +15,8 @@ public class EnemySlime : MonoBehaviour
     public PathCreator pathCreator;
     float distance = 0.0f;
     public float patrolspeed = 3;
+    private bool attack = false;
+    private bool attackready = true;
 
     public bool patrolling = true;
 
@@ -65,11 +67,27 @@ public class EnemySlime : MonoBehaviour
 
         if (aggro)
         {
-            navmesh.destination = player.transform.position;
+            
             patrolling = false;
+            if (Vector3.Distance(player.transform.position, transform.position) < 5 && attackready)
+            {
+                attackready = false;
+                attack = true;
+                StartCoroutine(atkreset());
+                StartCoroutine(atkpause());
+            }
+            else if (attack)
+            {
+                
+            }
+            else
+            {
+                navmesh.destination = player.transform.position;
+            }
 
             if (invuln)
             {
+                attack = false;
                 navmesh.destination = transform.position; // stops the slime moving when recovering from damage
                 slimeswitch = true;
                 GetComponent<Renderer>().material = slimehurtmat;
@@ -162,5 +180,25 @@ public class EnemySlime : MonoBehaviour
             }
 
         }
+    }
+
+    IEnumerator atkreset()
+    {
+        yield return new WaitForSeconds(15f);
+        attackready = true;
+    }
+
+    IEnumerator atkpause()
+    {
+        yield return new WaitForSeconds(1f);
+        navmesh.speed = 10;
+        navmesh.destination = player.transform.position;
+        yield return new WaitForSeconds(1f);
+        navmesh.destination = transform.position;
+        yield return new WaitForSeconds(1f);
+        navmesh.speed = 3;
+        navmesh.destination = player.transform.position;
+        attack = false;
+
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8464296254714237339
+--- !u!1 &1282799255518629900
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8464296254714237351}
-  - component: {fileID: 8464296254714237350}
-  - component: {fileID: 8464296254714237349}
-  - component: {fileID: 8464296254714237348}
-  - component: {fileID: 8464296254714237344}
-  - component: {fileID: 8464296254714237346}
-  - component: {fileID: 8464296254714237345}
+  - component: {fileID: 1282799255518629936}
+  - component: {fileID: 1282799255518629937}
+  - component: {fileID: 1282799255518629938}
+  - component: {fileID: 1282799255518629939}
+  - component: {fileID: 1282799255518629943}
+  - component: {fileID: 1282799255518629941}
+  - component: {fileID: 1282799255518629942}
   m_Layer: 0
-  m_Name: Enemyslime
+  m_Name: REnemyslime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8464296254714237351
+--- !u!4 &1282799255518629936
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8464296254714237339}
+  m_GameObject: {fileID: 1282799255518629900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 257.88, y: 60.49, z: -28.43}
+  m_LocalPosition: {x: 18.753162, y: 17.392246, z: 178.81741}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8464296254714237350
+--- !u!33 &1282799255518629937
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8464296254714237339}
+  m_GameObject: {fileID: 1282799255518629900}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8464296254714237349
+--- !u!23 &1282799255518629938
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8464296254714237339}
+  m_GameObject: {fileID: 1282799255518629900}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4e8f4f556a9b4bc48b8875da02ec66a0, type: 2}
+  - {fileID: 2100000, guid: b5657396f8cffb84ea1616211170fb45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,34 +86,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8464296254714237348
+--- !u!65 &1282799255518629939
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8464296254714237339}
+  m_GameObject: {fileID: 1282799255518629900}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8464296254714237344
+--- !u!114 &1282799255518629943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8464296254714237339}
+  m_GameObject: {fileID: 1282799255518629900}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05182c638bfd5744fa995d3090c72f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slimemat: {fileID: 2100000, guid: 4e8f4f556a9b4bc48b8875da02ec66a0, type: 2}
-  slimehurtmat: {fileID: 2100000, guid: d5d4c672453e71d4cbbd6489e64864a0, type: 2}
-  smallerslimeprefab: {fileID: 8629914397164342222, guid: 2494bce9c39f4294b9841a4e61d2a2f4, type: 3}
+  slimemat: {fileID: 2100000, guid: b5657396f8cffb84ea1616211170fb45, type: 2}
+  slimehurtmat: {fileID: 2100000, guid: 581c52c718770394cbc1ce991ad46269, type: 2}
+  smallerslimeprefab: {fileID: 7943266270249901456, guid: d5931e16428862448adcfc481f251a8e, type: 3}
   enemyzonetrigger: {fileID: 0}
   pathCreator: {fileID: 0}
   patrolspeed: 3
@@ -124,13 +124,13 @@ MonoBehaviour:
   health: 3
   iframecount: 60
   slimesize: 3
---- !u!195 &8464296254714237346
+--- !u!195 &1282799255518629941
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8464296254714237339}
+  m_GameObject: {fileID: 1282799255518629900}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
@@ -146,13 +146,13 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &8464296254714237345
+--- !u!54 &1282799255518629942
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8464296254714237339}
+  m_GameObject: {fileID: 1282799255518629900}
   serializedVersion: 2
   m_Mass: 1000
   m_Drag: 0

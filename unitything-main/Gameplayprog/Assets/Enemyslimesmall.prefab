@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slimemat: {fileID: 2100000, guid: 4e8f4f556a9b4bc48b8875da02ec66a0, type: 2}
-  slimehurtmat: {fileID: 2100000, guid: 581c52c718770394cbc1ce991ad46269, type: 2}
+  slimehurtmat: {fileID: 2100000, guid: d5d4c672453e71d4cbbd6489e64864a0, type: 2}
   smallerslimeprefab: {fileID: 0}
   enemyzonetrigger: {fileID: 0}
   pathCreator: {fileID: 0}
