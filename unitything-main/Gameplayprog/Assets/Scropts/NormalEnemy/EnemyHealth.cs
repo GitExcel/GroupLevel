@@ -86,7 +86,7 @@ public class EnemyHealth : MonoBehaviour
             Debug.Log("THISWORKS");
             IsEnemyDead = true;
             movingblock.directlymove = true;
-            Destroy(gameObject);
+            gameObject.active = false;
         }
     }
 
