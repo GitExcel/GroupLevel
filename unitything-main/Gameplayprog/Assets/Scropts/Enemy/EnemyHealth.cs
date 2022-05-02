@@ -50,21 +50,23 @@ public class EnemyHealth : MonoBehaviour
             IsEnemyDead = true;
         }
         
-        if (currentHealth == 500)
-        {
-            //Destroy(gameObject);
-            Instantiate(newPrefab, transform.position, transform.rotation);
-            newPrefab.transform.localScale = scale2;
-        }
-        else if (currentHealth == 250)
-        {
-            //Destroy(newPrefab);
-            Instantiate(newPrefab2, transform.position, transform.rotation);
-            newPrefab2.transform.localScale = scale3;
-        }
-        else if (currentHealth <= 0)
+        // if (currentHealth == 500)
+        // {
+        //     //Destroy(gameObject);
+        //     Instantiate(newPrefab, transform.position, transform.rotation);
+        //     newPrefab.transform.localScale = scale2;
+        // }
+        // else if (currentHealth == 250)
+        // {
+        //     //Destroy(newPrefab);
+        //     Instantiate(newPrefab2, transform.position, transform.rotation);
+        //     newPrefab2.transform.localScale = scale3;
+        // }
+        
+        if (currentHealth <= 0)
         {
             IsEnemyDead = true;
+            //Destroy(gameObject);
         }
     }
 
@@ -76,11 +78,11 @@ public class EnemyHealth : MonoBehaviour
         {
             AttackPlayer();
         }
-        if (IsEnemyDead)
-        {
-            Debug.Log("ENEMY DED");
-            Destroy(gameObject);
-        }
+        // if (IsEnemyDead)
+        // {
+        //     Debug.Log("ENEMY DED");
+        //    // Destroy(gameObject);
+        // }
     }
 
     public void AttackPlayer()

@@ -72,7 +72,7 @@ public class PatrolAndAttack : MonoBehaviour
     {
         //var position = gameObject.transform.position;
         distanceToPlayer = Vector3.Distance(gameObject.transform.position, target.position);
-        if (EnemyHealth.IsEnemyDead == false)
+        if (gameObject.GetComponent<EnemyHealth>().currentHealth > 0) //EnemyHealth.IsEnemyDead == false ||
         {
             if (playerInRange && canAttack)
             {
@@ -91,32 +91,12 @@ public class PatrolAndAttack : MonoBehaviour
                 transform.position += Vector3.back * speed * Time.deltaTime;
             }
         }
+        if (gameObject.GetComponent<EnemyHealth>().currentHealth <= 0)
+        {
+            Move(0);
+        }
     }
 
-    private void SpottingThePlayer()
-    {
-        // var position = gameObject.transform.position;
-        // distanceToPlayer = Vector3.Distance(position, target.position);
-        // if (EnemyHealthAttack.IsEnemyDead == false)
-        // {
-        //     if (playerInRange && canAttack)
-        //     {
-        //         Move(speed);
-        //         if (distanceToPlayer < 1f)
-        //         {
-        //             gameObject.GetComponent<EnemyHealthAttack>().AttackPlayer();
-        //             //StartCoroutine(AttackCooldown());
-        //             //Debug.Log("distance is very close ngl");
-        //         }
-        //     }
-        //     else
-        //     {
-        //         Patrolling();
-        //     }
-        // }
-        //
-    }
-    
     IEnumerator AttackCooldown()
     {
         canAttack = false;
