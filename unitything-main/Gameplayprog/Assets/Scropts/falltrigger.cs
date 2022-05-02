@@ -19,6 +19,7 @@ public class falltrigger : MonoBehaviour
         if (why)
         {
             player.transform.position = respawnlocation.transform.position;
+            Application.LoadLevel(Application.loadedLevel);
             why = false;
         }
     }
